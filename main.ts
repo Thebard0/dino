@@ -28,6 +28,17 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorLight0, function (sp
         . . . . . . . . . . . . . . . . 
         `)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, location) {
+    tiles.setTileAt(location, sprites.dungeon.collectibleRedCrystal)
+    Dino.startEffect(effects.hearts)
+    Dino.startEffect(effects.confetti)
+    Dino.startEffect(effects.smiles)
+    Dino.startEffect(effects.bubbles)
+    Dino.sayText("WoOoW")
+    effects.hearts.startScreenEffect()
+    effects.confetti.startScreenEffect()
+    effects.smiles.startScreenEffect()
+})
 controller.combos.attachCombo("RIGHT RIGHT RIGHT RIGHT", function () {
     Dino.sx = 10
     Dino.sy = 10
@@ -427,7 +438,4 @@ game.onUpdateInterval(10, function () {
 })
 game.onUpdateInterval(20000, function () {
     info.startCountdown(5)
-})
-forever(function () {
-    music.playMelody("B B A A G G F F ", 10000)
 })
