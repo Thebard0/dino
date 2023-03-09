@@ -1,6 +1,5 @@
 {
     "name": "dino",
-    "version": "1.0.0",
     "description": "",
     "dependencies": {
         "device": "*",
@@ -17,11 +16,7 @@
         "README.md",
         "assets.json",
         "tilemap.g.jres",
-        "tilemap.g.ts",
-        "main.py"
-    ],
-    "testFiles": [
-        "test.ts"
+        "tilemap.g.ts"
     ],
     "targetVersions": {
         "target": "1.12.24",
